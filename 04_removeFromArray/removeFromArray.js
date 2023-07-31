@@ -1,5 +1,5 @@
-const removeFromArray = function(...arg) {
-
+const removeFromArray = function(arr, ...arg) {
+/*  // this was when i used ...arg as the only parameter LMAOOOO
     let newArr = [];
     for (let i = 0; i<arg[0].length; i++)
     {
@@ -12,7 +12,16 @@ const removeFromArray = function(...arg) {
             newArr.push(arg[0][i])
         }
     }
-        return newArr;
+        return newArr;*/
+const newArr = []
+
+arr.forEach((element) => {
+    if(!arg.includes(element))
+    {
+        newArr.push(element)
+    }
+})
+return newArr;
 };
 
 // Do not edit below this line
